@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth scroll-pt-8">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Snackburg</title>
+        <link rel="icon" href="images/snackburgIcon.png" type="image/x-icon">
+
+        <!-- Tailwind CSS -->
+        <link href="tailwindStyles.css" rel="stylesheet">
+        <!-- FontAwesome CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+        <link href="styles.css" rel="stylesheet">
+    </head>
+
+    <body class="bg-gray-900">
+        <nav class="bg-gray-900">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <a href="#" class="flex items-center space-x-3">
+                    <img src="images/snackburgIcon.png" class="h-8" alt="Snackburg Logo">
+                    <span class="self-center text-2xl font-semibold text-white whitespace-nowrap">SNACKBURG</span>
+                </a>
+                <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+                    <span class="sr-only">Expand navigation bar mobile menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                    </svg>
+                </button>
+                <div class="hidden w-full md:w-auto md:block" id="navbar-default">
+                    <ul class="flex flex-col md:flex-row mt-4 md:mt-0 p-4 md:p-0 border md:border-0 rounded-lg border-gray-700 bg-gray-900 md:space-x-8 font-medium">
+                        <li>
+                            <a href="#" class="block py-2 px-3 md:p-0 text-white md:text-blue-500 bg-blue-700 md:bg-transparent rounded-sm hover:underline underline-offset-8" aria-current="page">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block py-2 px-3 md:p-0 text-white md:hover:text-blue-400 rounded-sm md:border-0 hover:underline underline-offset-8">Our Menu</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block py-2 px-3 md:p-0 text-white md:hover:text-blue-400 rounded-sm md:border-0 hover:underline underline-offset-8">Order Now</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section id="welcomeBanner" class="justify-items-center pt-12 pb-6 md:pb-12">
+            <div class="flex flex-col md:flex-row">
+                <div class="flex justify-center md:justify-end w-full md:w-1/2">
+                    <img src="images/welcomeBannerImage.png" alt="Creative image of burger and french fries" class="max-w-sm lg:max-w-xl">
+                </div>
+                <div class="flex flex-col justify-start md:justify-center w-full md:w-1/2">
+                    <h2 class="px-3 text-6xl font-bold text-white text-center md:text-left">SNACKBURG</h2>
+                    <p class="px-3 text-xl text-gray-400 text-center md:text-left">Have a quick snack that can still fill you up!</p>
+                    <button class="mx-auto md:mx-3 mt-5 mb-3 px-4 py-2 border-2 rounded-lg max-w-32 bg-gray-800 hover:bg-blue-900 font-semibold text-white cursor-pointer hover:scale-105 transition duration-200 ease-out">Order Now</button>
+                </div>
+            </div>
+            <button onclick="window.location='index.html#comboMenu'" class="m-3 mt-36 px-8 py-2 border-2 rounded-lg bg-gray-800 hover:bg-blue-900 font-semibold text-white cursor-pointer hover:scale-105 transition duration-200 ease-out">VIEW MORE</button>
+        </section>
+
+        <section id="comboMenu" class="justify-items-center py-12 bg-gray-800">
+            <h2 class="mb-8 px-5 text-4xl font-bold text-white text-center">
+                <i class="fa-solid fa-angle-right"></i> OUR BEST SELLING COMBOS <i class="fa-solid fa-angle-left"></i>
+            </h2>
+
+            <div class="flex flex-row justify-center flex-wrap">
+                <div class="p-5 flex hover:scale-105 transition duration-200 ease-in-out">
+                    <div class="flex flex-col p-3 rounded-xl w-80 h-full bg-white">
+                        <div class="block mx-auto mb-3 p-2 rounded-xl w-fit bg-gradient-to-t from-blue-400 via-blue-100 to-white">
+                            <img src="images/cheeseburger.png" alt="Cheeseburger" class="w-40">
+                        </div>
+                        <h3 class="px-2 font-bold text-2xl">Cheeseburger</h3>
+                        <p class="my-2 px-2 text-gray-800 flex-grow">
+                            Description that is most likely to be very long and is describing a specific item in our very cool and creative food restaurant menu yippie hooray!
+                        </p>
+                        <h4 class="mt-5 mb-2 px-2 font-bold text-2xl text-blue-700">PHP 999</h4>
+                    </div>
+                </div>
+        
+                <div class="p-5 flex hover:scale-105 transition duration-200 ease-in-out">
+                    <div class="flex flex-col p-3 rounded-xl w-80 h-full bg-white">
+                        <div class="block mx-auto mb-3 p-2 rounded-xl w-fit bg-gradient-to-t from-blue-400 via-blue-100 to-white">
+                            <img src="images/cheeseburger.png" alt="Cheeseburger" class="w-40">
+                        </div>
+                        <h3 class="px-2 font-bold text-2xl">Cheeseburger</h3>
+                        <p class="my-2 px-2 text-gray-800 flex-grow">
+                            Description that is just very short...
+                        </p>
+                        <h4 class="mt-5 mb-2 px-2 font-bold text-2xl text-blue-700">PHP 999</h4>
+                    </div>
+                </div>
+
+                <div class="p-5 flex hover:scale-105 transition duration-200 ease-in-out">
+                    <div class="flex flex-col p-3 rounded-xl w-80 h-full bg-white">
+                        <div class="block mx-auto mb-3 p-2 rounded-xl w-fit bg-gradient-to-t from-blue-400 via-blue-100 to-white">
+                            <img src="images/cheeseburger.png" alt="Cheeseburger" class="w-40">
+                        </div>
+                        <h3 class="px-2 font-bold text-2xl">Cheeseburger</h3>
+                        <p class="my-2 px-2 text-gray-800 flex-grow">
+                            Description that is just very short...
+                        </p>
+                        <h4 class="mt-5 mb-2 px-2 font-bold text-2xl text-blue-700">PHP 999</h4>
+                    </div>
+                </div>
+
+                <div class="p-5 flex hover:scale-105 transition duration-200 ease-in-out">
+                    <div class="flex flex-col p-3 rounded-xl w-80 h-full bg-white">
+                        <div class="block mx-auto mb-3 p-2 rounded-xl w-fit bg-gradient-to-t from-blue-400 via-blue-100 to-white">
+                            <img src="images/cheeseburger.png" alt="Cheeseburger" class="w-40">
+                        </div>
+                        <h3 class="px-2 font-bold text-2xl">Cheeseburger</h3>
+                        <p class="my-2 px-2 text-gray-800 flex-grow">
+                            Description that is just very short...
+                        </p>
+                        <h4 class="mt-5 mb-2 px-2 font-bold text-2xl text-blue-700">PHP 999</h4>
+                    </div>
+                </div>
+            </div>
+
+            <button class="m-3 px-12 py-2 border-2 rounded-lg bg-gray-900 hover:bg-blue-900 font-semibold text-2xl text-white cursor-pointer hover:scale-105 transition duration-200 ease-out">Check our entire menu!</button>
+        </section>
+
+        <section id="storeLocations" class="justify-items-center py-12 bg-gray-900">
+            <h2 class="mb-8 px-5 text-4xl font-bold text-white text-center">
+                <i class="fa-solid fa-angle-right"></i> CHECK OUT OUR STORE LOCATIONS <i class="fa-solid fa-angle-left"></i>
+            </h2>
+
+            <button class="mt-3 px-12 py-2 border-2 rounded-lg bg-gray-800 hover:bg-blue-900 font-semibold text-2xl text-white cursor-pointer hover:scale-105 transition duration-200 ease-out">RIGHT HERE!</button>
+            <div class="object-cover">
+                <img src="images/storeLocBG.png" class="object-cover w-full min-h-[400px]">
+            </div>
+        </section>
+
+        <section id="services" class="justify-items-center py-12 bg-gray-800">
+            <h2 class="mb-8 px-5 text-4xl font-bold text-white text-center">
+                <i class="fa-solid fa-angle-right"></i> OUR SERVICES <i class="fa-solid fa-angle-left"></i>
+            </h2>
+
+            <div class="flex flex-row justify-center flex-wrap">
+                <div class="flex flex-row items-center m-3 px-6 py-3 rounded-full bg-white hover:scale-105 transition duration-200 ease-in-out">
+                    <div>
+                        <div class="p-8 rounded-full bg-blue-300 text-3xl w-16 h-16 flex items-center justify-center">
+                            <i class="fa-solid fa-utensils"></i>
+                        </div>                        
+                    </div>
+                    <div class="ml-3">
+                        <h4 class="px-1 font-bold text-lg">
+                            DINE-IN
+                        </h4>
+                        <p class="px-1 max-w-56">
+                            Just walk in, order from our menu, and have a seat then eat your meal!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex flex-row items-center m-3 px-6 py-3 rounded-full bg-white hover:scale-105 transition duration-200 ease-in-out">
+                    <div>
+                        <div class="p-8 rounded-full bg-blue-300 text-3xl w-16 h-16 flex items-center justify-center">
+                            <i class="fa-solid fa-burger"></i>
+                        </div>                        
+                    </div>
+                    <div class="ml-3">
+                        <h4 class="px-1 font-bold text-lg">
+                            TAKE-OUT
+                        </h4>
+                        <p class="px-1 max-w-56">
+                            Just walk in, order from our menu, and wait for your meal to be served!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex flex-row items-center m-3 px-6 py-3 rounded-full bg-white hover:scale-105 transition duration-200 ease-in-out">
+                    <div>
+                        <div class="p-8 rounded-full bg-blue-300 text-3xl w-16 h-16 flex items-center justify-center">
+                            <i class="fa-solid fa-car-side"></i>
+                        </div>                        
+                    </div>
+                    <div class="ml-3">
+                        <h4 class="px-1 font-bold text-lg">
+                            DRIVE-THRU
+                        </h4>
+                        <p class="px-1 max-w-56">
+                            Just enter our drive-thru, order from our menu, and receive your meal!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex flex-row items-center m-3 px-6 py-3 rounded-full bg-white hover:scale-105 transition duration-200 ease-in-out">
+                    <div>
+                        <div class="p-8 rounded-full bg-blue-300 text-3xl w-16 h-16 flex items-center justify-center">
+                            <i class="fa-solid fa-motorcycle"></i>
+                        </div>                        
+                    </div>
+                    <div class="ml-3">
+                        <h4 class="px-1 font-bold text-lg">
+                            DELIVERY
+                        </h4>
+                        <p class="px-1 max-w-56">
+                            Order from our website or call us, and have your order delivered to you!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="px-24 py-5">
+            <p class="text-white"> FOOTER </p>
+        </footer>
+  
+        <!-- Flowbite JS -->
+        <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    </body>
+</html>
