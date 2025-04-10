@@ -1,0 +1,5 @@
+.numberInNoButton::-webkit-inner-spin-button,
+.numberInNoButton::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

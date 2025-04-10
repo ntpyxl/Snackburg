@@ -12,6 +12,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
         <link href="styles.css" rel="stylesheet">
+
+        <script src="receiptScrollButton.js"></script>
     </head>
 
     <body class="bg-gray-900 cursor-default">
@@ -45,6 +47,10 @@
                 </div>
             </div>
         </nav>
+
+        <button id="scrollOrderButton" onclick="window.location='pos.html#receipt'" class="fixed md:hidden bottom-5 right-5 p-3 border-2 border-gray-900 bg-blue-200 text-black font-semibold rounded-full text-3xl shadow-lg">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
 
         <div class="grid grid-cols-12">
             <section id="menu" class="col-span-12 md:col-span-9 px-2 py-5 bg-gray-800">
@@ -604,12 +610,77 @@
                 </div>
             </section>
 
-            <section id="receipt" class="col-span-12 md:col-span-3 px-2 py-5 bg-blue-100">
-                <h2 class="mb-4 px-5 text-4xl font-bold text-center">CART</h2>
+            <section id="receipt" class="col-span-12 md:col-span-3 px-2 pt-5 rounded-t-4xl md:rounded-t-none md:rounded-l-2xl bg-blue-200 sticky top-0 h-[62vh] md:h-[90vh]">
+                <h2 class="px-5 text-4xl font-bold text-center">ORDER CART</h2>
+                <hr class="w-[85vw] md:w-[20vw] mx-auto h-1 my-4 bg-gray-800 border-0">
+
+                <div id="orderList" class="border-2 border-gray-500 rounded-lg m-2 p-3 px-5 bg-white font-semibold text-lg h-1/2 md:h-2/3 overflow-y-auto">
+                    <div class="grid grid-cols-[7fr_2fr_3fr] gap-2 border-b border-gray-500 px-3 py-2 font-bold">
+                        <span class="text-left">Product Name</span>
+                        <span class="text-center">Quantity</span>
+                        <span class="text-right">Price</span>
+                    </div>
+                    
+                    <div class="grid grid-cols-[7fr_2fr_3fr] gap-2 border-t border-gray-500 px-3 pt-2">
+                        <span class="text-left">Decent Combo</span>
+                        <span class="text-center">x1</span>
+                        <span class="text-right">PHP 95</span>
+                    </div>
+                    <div class="grid grid-cols-[7fr_2fr_3fr] gap-2 border-none border-gray-500 px-3">
+                        <span class="text-left ml-5 font-normal">Cheese Fries S</span>
+                        <span class="text-center"></span>
+                        <span class="text-right"></span>
+                    </div>
+                    <div class="grid grid-cols-[7fr_2fr_3fr] gap-2 border-none border-gray-500 px-3">
+                        <span class="text-left ml-5 font-normal">Coke Soda S</span>
+                        <span class="text-center"></span>
+                        <span class="text-right"></span>
+                    </div>
+                    <div class="grid grid-cols-[7fr_2fr_3fr] gap-2 border-t border-gray-500 px-3 pt-2">
+                        <span class="text-left">Stacked Burger</span>
+                        <span class="text-center">x1</span>
+                        <span class="text-right">PHP 95</span>
+                    </div>
+                    <div class="grid grid-cols-[7fr_2fr_3fr] gap-2 border-t border-gray-500 px-3 pt-2">
+                        <span class="text-left">Cheese French Fries M</span>
+                        <span class="text-center">x1</span>
+                        <span class="text-right">PHP 40</span>
+                    </div>
+                    <div class="grid grid-cols-[7fr_2fr_3fr] gap-2 border-t border-gray-500 px-3 pt-2">
+                        <span class="text-left">Big Combo</span>
+                        <span class="text-center">x1</span>
+                        <span class="text-right">PHP 110</span>
+                    </div>
+                    <div class="grid grid-cols-[7fr_2fr_3fr] gap-2 border-none border-gray-500 px-3">
+                        <span class="text-left ml-5 font-normal">Barbecue Chips M</span>
+                        <span class="text-center"></span>
+                        <span class="text-right"></span>
+                    </div>
+                    <div class="grid grid-cols-[7fr_2fr_3fr] gap-2 border-none border-gray-500 px-3">
+                        <span class="text-left ml-5 font-normal">Apple Juice M</span>
+                        <span class="text-center"></span>
+                        <span class="text-right"></span>
+                    </div>
+                </div>
+
+                <h2 class="mb-4 px-5 text-2xl font-semibold text-right">
+                    TOTAL AMOUNT TO PAY: 
+                    <span class="ml-3 font-bold">
+                        PHP 0.00
+                    </span>
+                </h2>
+
+                <div class="flex flex-col items-end">
+                    <input type="number" min="1" step="1" value="" placeholder="PHP 0.00" class="mx-2 px-3 py-1 w-5/8 border-2 border-black rounded-lg bg-white font-semibold text-lg numberInNoButton">
+                    <div class="flex flex-row">
+                        <button class="mx-2 mt-3 py-1 border-2 border-gray-800 rounded-lg bg-gray-100 hover:bg-blue-400 font-semibold text-2xl w-28 cursor-pointer hover:scale-105 transition duration-200 ease-out">RESET</button>
+                        <button class="mx-2 mt-3 py-1 border-2 border-gray-800 rounded-lg bg-gray-100 hover:bg-blue-400 font-semibold text-2xl w-40 cursor-pointer hover:scale-105 transition duration-200 ease-out">PAY NOW</button>
+                    </div>
+                </div>
             </section>
         </div>
 
-        <footer class="px-20 py-5 justify-items-center">
+        <footer id="footer" class="px-20 py-5 justify-items-center">
             <h3 class="text-3xl font-semibold text-white">
                 <i class="fa-solid fa-angle-right"></i> CONTACT US <i class="fa-solid fa-angle-left"></i>
             </h3>
@@ -642,7 +713,7 @@
                 <h3 class="ml-2 px-3 text-3xl font-bold text-white">SNACKBURG</h3>
             </div>
         </footer>
-  
+
         <!-- Flowbite JS -->
         <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
     </body>
