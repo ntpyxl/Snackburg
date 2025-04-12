@@ -5,13 +5,14 @@ let totalAmount = 0;
 for(var i = 0; i < buttonElements.length; i++) {
     buttonElements[i].addEventListener('click', function() {
         const product = this.closest('.menuItem');
+        const isComboItem = product.classList.contains('comboItem');
         const hasSnackVariant = product.classList.contains('hasSnackVariant');
         const hasDrinkVariant = product.classList.contains('hasDrinkVariant');
-        addNewItem(product, hasSnackVariant, hasDrinkVariant);
+        addNewItem(product, isComboItem, hasSnackVariant, hasDrinkVariant);
     });
 }
 
-function addNewItem(product, hasSnackVariant, hasDrinkVariant){
+function addNewItem(product, isComboItem, hasSnackVariant, hasDrinkVariant){
     const productName = product.querySelector('.productName').textContent;
     const quantity = product.querySelector('#quantity').value;
     const price = quantity * parseInt(product.querySelector('.productPrice').textContent.replace('PHP ', '')); // i.e. from "PHP 90", parses it into an integer 90
@@ -19,6 +20,22 @@ function addNewItem(product, hasSnackVariant, hasDrinkVariant){
     changeTotalAmount(price);
     createParentItem(productName, quantity, price);
 
+    if(isComboItem) {
+        switch(productName) {
+            case "Quickombo":
+                createChildItem("Cheeseburger");
+                break;
+            case "Decent Combo":
+                createChildItem("Cheeseburger");
+                break;
+            case "Big Combo":
+                createChildItem("Bacon Cheesebuger");
+                break;
+            case "Wombo Combo":
+                createChildItem("Stacked Burger");
+                break;
+        }
+    }
     if(hasSnackVariant) {
         const snackVariant = product.querySelector('#snackVariant');
         const snackFlavor = product.querySelector('#snackFlavor');
